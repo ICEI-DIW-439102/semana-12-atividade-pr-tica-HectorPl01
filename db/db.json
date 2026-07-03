@@ -1,18 +1,142 @@
 {
+  "projetos": [
+    {
+      "id": 1,
+      "nome": "Plzin Delivery",
+      "descricao": "Site de delivery de supermercado com catálogo de produtos, ofertas em destaque e layout responsivo.",
+      "detalhes": "O Plzin Delivery foi um dos meus primeiros projetos web completos. Ele simula a página de um serviço de delivery de supermercado, com vitrine de produtos, seções de ofertas e um layout pensado para funcionar bem tanto no celular quanto no desktop. Nesse projeto pratiquei bastante a estruturação semântica de páginas e a estilização de cards de produtos.",
+      "imagem": "assets/img/mercado.png",
+      "link": "https://hectorpl01.github.io/delivery/index.html",
+      "data": "2025-04-10",
+      "destaque": true,
+      "tecnologias": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Mercado Grid",
+      "descricao": "Página de mercado construída com CSS Grid, organizando produtos e banners em uma malha responsiva.",
+      "detalhes": "O Mercado Grid foi o projeto em que estudei a fundo o CSS Grid Layout. A página organiza banners, categorias e produtos em uma malha que se reorganiza conforme o tamanho da tela. Foi um exercício importante para entender áreas de grid, frações (fr) e media queries.",
+      "imagem": "assets/img/ogani.png",
+      "link": "https://hectorpl01.github.io/site-grid/index.html",
+      "data": "2025-05-20",
+      "destaque": true,
+      "tecnologias": [
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "id": 3,
+      "nome": "Site Fotografia",
+      "descricao": "Site de portfólio para um estúdio de fotografia, com galeria de imagens e visual elegante.",
+      "detalhes": "Projeto de site institucional para um estúdio de fotografia fictício. O foco foi criar uma identidade visual elegante, com galeria de fotos, tipografia bem escolhida e seções de apresentação do estúdio. Pratiquei composição visual, espaçamento e hierarquia de informação.",
+      "imagem": "assets/img/elit.png",
+      "link": "https://hectorpl01.github.io/sitefoto/",
+      "data": "2025-08-15",
+      "destaque": true,
+      "tecnologias": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "id": 4,
+      "nome": "Site Cotemig",
+      "descricao": "Releitura da página do Colégio Cotemig, reproduzindo seções institucionais com HTML e CSS.",
+      "detalhes": "Neste projeto reproduzi a página do Colégio Cotemig como exercício de fidelidade visual: cabeçalho, banners, cards de cursos e rodapé. Recriar um layout real me ajudou a treinar atenção aos detalhes de espaçamento, cores e alinhamento.",
+      "imagem": "assets/img/cotemig.png",
+      "link": "https://hectorpl01.github.io/site-cotemig/",
+      "data": "2025-09-30",
+      "destaque": true,
+      "tecnologias": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "id": 5,
+      "nome": "Portfólio Pessoal",
+      "descricao": "Meu site de portfólio com tema claro/escuro, carrossel de projetos e formulário de contato validado em JavaScript.",
+      "detalhes": "Este é o projeto que evoluiu até se tornar esta aplicação. Começou como um portfólio estático com seções de apresentação, habilidades e contato, ganhou tema claro/escuro e carrossel em JavaScript e, no Trabalho Prático 2, passou a consumir uma API REST com JSON Server, com login de usuários, pesquisa e favoritos.",
+      "imagem": "assets/img/imagem-sobre.png",
+      "link": "https://github.com/HectorPl01",
+      "data": "2026-06-01",
+      "destaque": false,
+      "tecnologias": [
+        1,
+        2,
+        3,
+        6
+      ]
+    }
+  ],
+  "tecnologias": [
+    {
+      "id": 1,
+      "nome": "HTML5",
+      "icone": "fab fa-html5",
+      "descricao": "Linguagem de marcação usada para estruturar o conteúdo das páginas."
+    },
+    {
+      "id": 2,
+      "nome": "CSS3",
+      "icone": "fab fa-css3-alt",
+      "descricao": "Folhas de estilo responsáveis pelo visual, cores e responsividade."
+    },
+    {
+      "id": 3,
+      "nome": "JavaScript",
+      "icone": "fab fa-js",
+      "descricao": "Linguagem de programação que dá interatividade às páginas."
+    },
+    {
+      "id": 4,
+      "nome": "Flexbox",
+      "icone": "fas fa-arrows-alt-h",
+      "descricao": "Módulo do CSS para alinhamento e distribuição de elementos em uma dimensão."
+    },
+    {
+      "id": 5,
+      "nome": "CSS Grid",
+      "icone": "fas fa-th",
+      "descricao": "Módulo do CSS para layouts bidimensionais em linhas e colunas."
+    },
+    {
+      "id": 6,
+      "nome": "JSON Server",
+      "icone": "fas fa-database",
+      "descricao": "Ferramenta que expõe um arquivo JSON como uma API REST completa."
+    }
+  ],
   "usuarios": [
     {
       "id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
       "login": "admin",
       "senha": "123",
       "nome": "Administrador do Sistema",
-      "email": "admin@abc.com"
+      "email": "admin@abc.com",
+      "admin": true
     },
     {
       "id": "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e",
       "login": "user",
       "senha": "123",
       "nome": "Usuario Comum",
-      "email": "user@abc.com"
+      "email": "user@abc.com",
+      "admin": false
+    }
+  ],
+  "favoritos": [
+    {
+      "id": 1,
+      "usuarioId": "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e",
+      "itemId": 1
     }
   ]
 }

@@ -7,44 +7,54 @@ Para esse projeto, além de mudarmos o JSON para o JSON Server, vamos permitir o
 
 ## Informações do trabalho
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Hector Paulo Nogueira Xavier
+- Matricula: 1632595
+- Proposta de projeto escolhida: Portfólio de projetos de desenvolvimento web
+- Breve descrição sobre seu projeto: Site de portfólio que apresenta meus projetos de desenvolvimento web (entidade principal) e as tecnologias utilizadas em cada um (entidade secundária). Os dados são servidos pelo JSON Server e o site possui carrossel de destaques, cards com pesquisa e favoritos, gráfico de projetos por tecnologia, tela de detalhes, login de usuários e CRUD de projetos restrito a administradores (login: `admin` / senha: `123`).
 
 **Registros do trabalho**
 
-<< DADOS DO DB.JSON (ENTIDADE PRINCIPAL E SECUNDÁRIA) >>
+Estruturas do `db.json` — entidade principal `projetos` e entidade secundária `tecnologias` (o arquivo completo também possui `usuarios` e `favoritos`):
 
 ```json
 {
-  "cidades": [
+  "projetos": [
     {
       "id": 1,
-      "nome": "Paris",
-      "descricao": "Capital francesa famosa por arte, gastronomia e arquitetura icônica.",
-      "conteudo": "Paris oferece museus de classe mundial, boulevards arborizados e cafés charmosos. Ideal para quem busca história, cultura e experiências gastronômicas.",
-      "pais": "França",
+      "nome": "Plzin Delivery",
+      "descricao": "Site de delivery de supermercado com catálogo de produtos, ofertas em destaque e layout responsivo.",
+      "detalhes": "O Plzin Delivery foi um dos meus primeiros projetos web completos. Ele simula a página de um serviço de delivery de supermercado...",
+      "imagem": "assets/img/mercado.png",
+      "link": "https://hectorpl01.github.io/delivery/index.html",
+      "data": "2025-04-10",
       "destaque": true,
-      "data": "2025-03-30",
-      "imagemPrincipal": "img/paris.jpg"
+      "tecnologias": [1, 2]
     }
   ],
-  "atracoes": [
+  "tecnologias": [
     {
       "id": 1,
-      "cidadeId": 1,
-      "nome": "Torre Eiffel",
-      "descricao": "Monumento símbolo de Paris com mirantes panorâmicos.",
-      "imagem": "img/atracoes/torre_eiffel.jpg"
+      "nome": "HTML5",
+      "icone": "fab fa-html5",
+      "descricao": "Linguagem de marcação usada para estruturar o conteúdo das páginas."
+    },
+    {
+      "id": 2,
+      "nome": "CSS3",
+      "icone": "fab fa-css3-alt",
+      "descricao": "Folhas de estilo responsáveis pelo visual, cores e responsividade."
     }
   ]
 }
 ```
 
-<< COLOQUE A IMAGEM DA HOME AQUI >>
+Print da home (carrossel de destaques, cards com pesquisa e favoritos, gráfico de projetos por tecnologia e seção do autor — todos com dados do JSON Server):
 
-<< COLOQUE A IMAGEM DA TELA DE DETALHES AQUI >>
+![Home do site](prints/home.png)
+
+Print da tela de detalhes (dados completos do projeto e as tecnologias utilizadas — entidade secundária):
+
+![Tela de detalhes](prints/detalhes.png)
 
 
 

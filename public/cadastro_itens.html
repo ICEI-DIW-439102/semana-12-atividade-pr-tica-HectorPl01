@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Projetos - Hector.dev</title>
+    <link rel="icon" href="assets/img/perfil.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html">
+            <img src="assets/img/perfil.png" alt="Logo Hector Paulo">
+            Hector<span>.dev</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#projetos">Projetos</a></li>
+                <li><a href="index.html#autor">Sobre o Autor</a></li>
+                <li id="menuCadastroItens" class="hidden"><a href="cadastro_itens.html"><i class="fas fa-plus-circle"></i> Cadastro de Projetos</a></li>
+                <li id="menuFavoritos" class="hidden"><a href="favoritos.html"><i class="fas fa-heart"></i> Favoritos</a></li>
+                <li id="menuLogin"><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+                <li id="menuUsuario" class="hidden"><span id="nomeUsuario"></span></li>
+                <li id="menuLogout" class="hidden"><a href="#" id="btnLogout"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+            </ul>
+        </nav>
+        <button id="togglebutton" title="Alternar tema claro/escuro"><img width="40" id="toggleimg" src="assets/img/moon.png" alt="Alternar tema"></button>
+    </header>
+
+    <section>
+        <h2><i class="fas fa-tools"></i> Cadastro de Projetos</h2>
+        <p class="subtitulo">Área restrita a administradores: insira, altere ou exclua os projetos mantidos no JSON Server.</p>
+
+        <form class="form-crud" id="formProjeto">
+            <input type="hidden" id="projetoId">
+
+            <label for="nome">Nome do projeto:</label>
+            <input type="text" id="nome" required>
+
+            <label for="descricao">Descrição curta (aparece nos cards):</label>
+            <input type="text" id="descricao" required>
+
+            <label for="detalhes">Detalhes (aparece na tela de detalhes):</label>
+            <textarea id="detalhes" rows="4"></textarea>
+
+            <div class="linha-dupla">
+                <div>
+                    <label for="imagem">Imagem (caminho ou URL):</label>
+                    <input type="text" id="imagem" placeholder="assets/img/exemplo.png ou https://..." required>
+                </div>
+                <div>
+                    <label for="link">Link do projeto:</label>
+                    <input type="url" id="link" placeholder="https://...">
+                </div>
+            </div>
+
+            <div class="linha-dupla">
+                <div>
+                    <label for="data">Data de publicação:</label>
+                    <input type="date" id="data" required>
+                </div>
+                <div>
+                    <label>Tecnologias utilizadas:</label>
+                    <div class="checks-tec" id="checksTecnologias"></div>
+                </div>
+            </div>
+
+            <label class="check-destaque">
+                <input type="checkbox" id="destaque"> Exibir no carrossel de destaques
+            </label>
+
+            <div class="acoes-form">
+                <button type="submit" class="btn btn-primario" id="btnSalvar"><i class="fas fa-save"></i> Cadastrar</button>
+                <button type="button" class="btn btn-neutro" id="btnLimpar"><i class="fas fa-eraser"></i> Limpar</button>
+            </div>
+            <p class="mensagem" id="mensagem"></p>
+        </form>
+
+        <h2>Projetos cadastrados</h2>
+        <div class="tabela-wrapper">
+            <table class="tabela-crud">
+                <thead>
+                    <tr>
+                        <th>Imagem</th>
+                        <th>Nome</th>
+                        <th>Data</th>
+                        <th>Destaque</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaProjetos"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Hector Paulo</h3>
+            <p>Desenvolvedor Júnior. Vamos nos conectar!</p>
+        </div>
+    </footer>
+
+    <script src="assets/scripts/session.js"></script>
+    <script src="assets/scripts/crud.js"></script>
+</body>
+
+</html>

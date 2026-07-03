@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário - Hector.dev</title>
+    <link rel="icon" href="assets/img/perfil.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html">
+            <img src="assets/img/perfil.png" alt="Logo Hector Paulo">
+            Hector<span>.dev</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#projetos">Projetos</a></li>
+                <li><a href="index.html#autor">Sobre o Autor</a></li>
+                <li id="menuCadastroItens" class="hidden"><a href="cadastro_itens.html"><i class="fas fa-plus-circle"></i> Cadastro de Projetos</a></li>
+                <li id="menuFavoritos" class="hidden"><a href="favoritos.html"><i class="fas fa-heart"></i> Favoritos</a></li>
+                <li id="menuLogin"><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+                <li id="menuUsuario" class="hidden"><span id="nomeUsuario"></span></li>
+                <li id="menuLogout" class="hidden"><a href="#" id="btnLogout"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+            </ul>
+        </nav>
+        <button id="togglebutton" title="Alternar tema claro/escuro"><img width="40" id="toggleimg" src="assets/img/moon.png" alt="Alternar tema"></button>
+    </header>
+
+    <section>
+        <form class="form-card" id="formCadastroUsuario">
+            <h2><i class="fas fa-user-plus"></i> Cadastro de Usuário</h2>
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" required autofocus>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="login">Login:</label>
+            <input type="text" id="login" name="login" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required minlength="3">
+
+            <label for="confirmaSenha">Confirme a senha:</label>
+            <input type="password" id="confirmaSenha" name="confirmaSenha" required minlength="3">
+
+            <button type="submit" class="btn btn-primario"><i class="fas fa-check"></i> Cadastrar</button>
+            <p class="mensagem" id="mensagem"></p>
+            <p class="form-rodape">Já tem conta? <a href="login.html">Faça login</a></p>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Hector Paulo</h3>
+            <p>Desenvolvedor Júnior. Vamos nos conectar!</p>
+        </div>
+    </footer>
+
+    <script src="assets/scripts/session.js"></script>
+    <script src="assets/scripts/login.js"></script>
+</body>
+
+</html>
